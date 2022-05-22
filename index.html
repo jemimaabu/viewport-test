@@ -1,16 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Document</title>
-</head>
-<body>
-  <h1>Hello, World</h1>
-  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea asperiores natus officiis ducimus maiores corporis, earum magni quam quisquam aliquam iure autem neque molestias itaque repellendus est? Ipsum, maxime velit.
-  Voluptatum asperiores dolorem, quos ut quis, ullam odit praesentium laboriosam facere officiis nemo? Commodi atque blanditiis in quibusdam voluptatibus iusto recusandae quo laudantium vitae facilis, asperiores sunt officiis quae aliquam?
-  Rem, aut fugit? Quis commodi id sed aut, autem veniam error nesciunt vitae suscipit quibusdam in dicta earum officiis ipsa eaque. Nihil velit reiciendis libero debitis corrupti, veritatis fugit facere!
-  Eum incidunt modi provident dolorum expedita autem explicabo libero similique perspiciatis error minima dolores praesentium molestiae officia id, totam non fugit iusto quisquam enim atque nihil eveniet. Earum, eligendi delectus.
-  Voluptatibus, consequuntur rem a similique cum ipsam enim, eveniet iusto eos laborum dolores magni accusantium labore nisi, voluptates assumenda porro. Quasi labore tempora veritatis architecto delectus nemo culpa similique aut!</p>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Viewport Test</title>
+  </head>
+  <body>
+    <h1>Hello, World</h1>
+    <button id="viewportToggle" style="padding: 0.5em 1em">Remove viewport</button>
+
+    <p>
+      Click the button above to remove the
+      <code>&lt;meta name="viewport"&gt;</code>tag
+    </p>
+
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea asperiores
+      natus officiis ducimus maiores corporis, earum magni quam quisquam aliquam
+      iure autem neque molestias itaque repellendus est? Ipsum, maxime velit.
+      Voluptatum asperiores dolorem, quos ut quis, ullam odit praesentium
+      laboriosam facere officiis nemo? Commodi atque blanditiis in quibusdam
+      voluptatibus iusto recusandae quo laudantium vitae facilis, asperiores
+      sunt officiis quae aliquam? Rem, aut fugit? Quis commodi id sed aut, autem
+      veniam error nesciunt vitae suscipit quibusdam in dicta earum officiis
+      ipsa eaque. Nihil velit reiciendis libero debitis corrupti, veritatis
+      fugit facere! Eum incidunt modi provident dolorum expedita autem explicabo
+      libero similique perspiciatis error minima dolores praesentium molestiae
+      officia id, totam non fugit iusto quisquam enim atque nihil eveniet.
+      Earum, eligendi delectus. Voluptatibus, consequuntur rem a similique cum
+      ipsam enim, eveniet iusto eos laborum dolores magni accusantium labore
+      nisi, voluptates assumenda porro. Quasi labore tempora veritatis
+      architecto delectus nemo culpa similique aut!
+    </p>
+  </body>
+
+  <script>
+    const button = document.getElementById("viewportToggle");
+
+    const removeViewport = () => {
+      const metaViewport = document.querySelector('[name="viewport"]');
+      if (metaViewport) {
+        metaViewport.remove();
+      }
+    };
+
+    button.addEventListener("click", removeViewport);
+  </script>
 </html>
