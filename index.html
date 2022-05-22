@@ -8,12 +8,6 @@
   </head>
   <body>
     <h1>Hello, World</h1>
-    <button id="viewportToggle" style="padding: 0.5em 1em">Remove viewport</button>
-
-    <p>
-      Click the button above to remove the
-      <code>&lt;meta name="viewport"&gt;</code>tag
-    </p>
 
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea asperiores
@@ -34,17 +28,4 @@
       architecto delectus nemo culpa similique aut!
     </p>
   </body>
-
-  <script>
-    const button = document.getElementById("viewportToggle");
-
-    const removeViewport = () => {
-      const metaViewport = document.querySelector('[name="viewport"]');
-      if (metaViewport) {
-        metaViewport.remove();
-      }
-    };
-
-    button.addEventListener("click", removeViewport);
-  </script>
 </html>
